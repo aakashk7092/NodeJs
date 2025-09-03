@@ -1,8 +1,13 @@
 const fs = require("fs");
 
-// Write to test.txt
-fs.writeFileSync("./test.txt", "Hey there");
+// Write file
+fs.writeFileSync("test.txt", "Hello Node.js!");
 
-// Read from contact.txt
-const result=fs.readFileSync("./contact.txt", "utf-8");
-console.log(result);
+// Read file
+console.log("Initial Content:", fs.readFileSync("test.txt", "utf-8"));
+
+// Append
+fs.appendFileSync("contact.txt", " yogi - +977599557");
+
+// Read again
+console.log("Updated Content:", fs.readFileSync("contact.txt", "utf-8"));
